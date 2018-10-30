@@ -172,7 +172,7 @@ public class AstarPath : VersionedMonoBehaviour {
 	///
 	/// [Open online documentation to see images]
 	/// </summary>
-	public PathLog logPathResults = PathLog.Normal;
+	public PathLog logPathResults = PathLog.None;
 
 	/// <summary>@}</summary>
 	#endregion
