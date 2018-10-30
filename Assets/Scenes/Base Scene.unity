@@ -7156,6 +7156,21 @@ Prefab:
       propertyPath: healthUI
       value: 
       objectReference: {fileID: 56841437}
+    - target: {fileID: 212114131065812956, guid: 7d4277540c9b32f4f98084f644eb5f07,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212114131065812956, guid: 7d4277540c9b32f4f98084f644eb5f07,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212114131065812956, guid: 7d4277540c9b32f4f98084f644eb5f07,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d4277540c9b32f4f98084f644eb5f07, type: 2}
   m_IsPrefabAsset: 0
@@ -7606,7 +7621,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -7629,7 +7644,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1435660813}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.2027435, y: 0.02006884, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

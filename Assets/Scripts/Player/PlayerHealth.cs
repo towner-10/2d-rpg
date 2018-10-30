@@ -24,6 +24,13 @@ public class PlayerHealth : MonoBehaviour {
     public void Damage(int damage)
     {
         health -= damage;
+        StartCoroutine(DamageEffects());
         healthUI.value = health;
+    }
+
+    IEnumerator DamageEffects(){
+        GetComponent<SpriteRenderer>().color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        GetComponent<SpriteRenderer>().color = Color.white;
     }
 }
