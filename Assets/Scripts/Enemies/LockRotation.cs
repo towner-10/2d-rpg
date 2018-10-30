@@ -5,13 +5,23 @@ using UnityEngine;
 public class LockRotation : MonoBehaviour {
 
     Quaternion rotation;
+    public Transform player;
 
 	void Start () {
         rotation = this.transform.rotation;
 	}
 
 	void Update () {
-        this.transform.rotation = rotation;
+        if(player.position.x > transform.position.x)
+        {
+            rotation.y -= 180;
+        }
 
+        if(player.position.x < transform.position.x)
+        {
+            rotation.y = 0;
+        }
+
+        this.transform.rotation = rotation;
     }
 }

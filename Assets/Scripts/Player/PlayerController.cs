@@ -3,11 +3,11 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 300f;
+    public float moveSpeed = 3;
 
-    public bool attacking = false;
+    [HideInInspector]public bool attacking = false;
 
-    public Vector2 direction;
+    [HideInInspector]public Vector2 direction;
 
     private Animator anim;
     private Rigidbody2D rb;
@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        moveSpeed *= 100;
     }
 
     void Update()

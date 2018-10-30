@@ -16,25 +16,28 @@ public class PlayerAttackManager : MonoBehaviour {
 	}
 	
 	void Update () {
-        if (pc.direction.x >= 5)
+        if(pc.attacking == false)
         {
-            attackDirection = AttackDirection.Up;
-            DisableColliders();
-        }
-        else if (pc.direction.x <= -5)
-        {
-            attackDirection = AttackDirection.Down;
-            DisableColliders();
-        }
-        else if (pc.direction.y <= -5)
-        {
-            attackDirection = AttackDirection.Left;
-            DisableColliders();
-        }
-        else if (pc.direction.y >= 5)
-        {
-            attackDirection = AttackDirection.Right;
-            DisableColliders();
+            if (pc.direction.x >= 5)
+            {
+                attackDirection = AttackDirection.Up;
+                DisableColliders();
+            }
+            else if (pc.direction.x <= -5)
+            {
+                attackDirection = AttackDirection.Down;
+                DisableColliders();
+            }
+            else if (pc.direction.y <= -5)
+            {
+                attackDirection = AttackDirection.Left;
+                DisableColliders();
+            }
+            else if (pc.direction.y >= 5)
+            {
+                attackDirection = AttackDirection.Right;
+                DisableColliders();
+            }
         }
     }
 

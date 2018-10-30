@@ -28,7 +28,9 @@ public class EnemyHealth : MonoBehaviour {
     {
         this.gameObject.GetComponent<Rigidbody2D>().velocity = pc.direction * 2;
         this.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+        this.gameObject.GetComponent<Pathfinding.AIPath>().canMove = false;
         yield return new WaitForSeconds(0.1f);
+        this.gameObject.GetComponent<Pathfinding.AIPath>().canMove = true;
         this.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
         this.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
     }
