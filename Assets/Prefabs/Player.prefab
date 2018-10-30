@@ -48,7 +48,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1571605550155624
 GameObject:
   m_ObjectHideFlags: 0
@@ -114,7 +114,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1975502625025146
 GameObject:
   m_ObjectHideFlags: 1
@@ -131,7 +131,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4085579687265718
 Transform:
   m_ObjectHideFlags: 1
@@ -139,7 +139,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1226861339344340}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.431786, y: 0.09504983, z: 0}
+  m_LocalPosition: {x: -2.203, y: 0.2, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 1}
   m_Children:
   - {fileID: 4656687946003044}
@@ -403,9 +403,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a337ca3615ba49b49bc2d07c233c630a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 300
+  moveSpeed: 3
   attacking: 0
-  direction: {x: -4.969986, y: 0}
+  direction: {x: 0, y: 0}
 --- !u!114 &114227902375430122
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -454,7 +454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b46dae9512d2c9f479272d59ea42a81f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDirection: 1
+  attackDirection: 0
 --- !u!114 &114959204070040114
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -514,7 +514,7 @@ SpriteRenderer:
   m_SortingLayerID: -1122059407
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: de7a3320a9f37594c8ef87e7d337d3f9, type: 3}
+  m_Sprite: {fileID: 21300004, guid: de7a3320a9f37594c8ef87e7d337d3f9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
