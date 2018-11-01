@@ -5,14 +5,14 @@ using UnityEngine;
 public class ShopTrigger : MonoBehaviour {
 
     public string shopName;
-    public ShopItem[] shopItems;
+    public List<ShopItem> shopItems = new List<ShopItem>();
     public ShopManager sm;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.tag == "Player")
         {
-            sm.ShowShopUI(shopItems, shopName);
+            sm.ShowShopUI(this, shopItems, shopName);
         }
     }
 }

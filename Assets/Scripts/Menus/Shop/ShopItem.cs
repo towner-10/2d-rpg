@@ -6,6 +6,8 @@ using UnityEngine;
 public class ShopItem {
 	public string itemName;
 
+    public float itemPrice;
+
 	public enum itemType{ Sword, Shield, Potion, Bonus }
 	public itemType itemTypeSelector;
 
