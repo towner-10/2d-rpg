@@ -24,7 +24,7 @@ public class EnemyAttack : MonoBehaviour {
     {
         canAttack = false;
         yield return new WaitForSeconds(0.1f);
-        if (GetComponent<Pathfinding.AIPath>().remainingDistance > GetComponent<Pathfinding.AIPath>().endReachedDistance)
+        if (Vector2.Distance(this.transform.position, player.transform.position) > GetComponent<Pathfinding.AIPath>().endReachedDistance)
         {
             canAttack = true;
             yield break;
