@@ -13,7 +13,7 @@ public class ShopManager : MonoBehaviour {
     public bool hovering = false;
 
     ShopTrigger trigger;
-	bool enabled = false;
+	bool shopEnabled = false;
 
     List<GameObject> currentObjectsOnDisplay = new List<GameObject>();
 
@@ -27,7 +27,7 @@ public class ShopManager : MonoBehaviour {
 
         hoverUI.SetActive(hovering);
 
-        if (enabled == true)
+        if (shopEnabled == true)
         {
             if (Input.GetKeyDown(KeyCode.Return))
             {
@@ -53,7 +53,7 @@ public class ShopManager : MonoBehaviour {
 	public void ShowShopUI(ShopTrigger st, List<ShopItem> shopItems, string shopName){
         trigger = st;
 		shopUI.SetActive(true);
-		enabled = true;
+		shopEnabled = true;
 		Time.timeScale = 0;
 		shopUI.transform.Find("ShopName").gameObject.GetComponent<TextMeshProUGUI>().text = shopName;
 
@@ -88,7 +88,7 @@ public class ShopManager : MonoBehaviour {
 			Destroy(gm.gameObject);
 		}
 
-		enabled = false;
+		shopEnabled = false;
 		shopUI.SetActive(false);
 	}
 }

@@ -51,7 +51,6 @@ public class PlayerAttackManager : MonoBehaviour {
 
         foreach (GameObject collider in attackColliders)
         {
-            Debug.Log(collider.name);
             collider.SetActive(false);
         }
     }

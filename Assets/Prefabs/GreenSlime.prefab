@@ -24,11 +24,11 @@ GameObject:
   - component: {fileID: 50284750243888208}
   - component: {fileID: 114947627429837194}
   - component: {fileID: 114487689673633932}
-  - component: {fileID: 114048375504182774}
   - component: {fileID: 114293956255666166}
   - component: {fileID: 114506578370879316}
   - component: {fileID: 114955888151784342}
   - component: {fileID: 95462097858389752}
+  - component: {fileID: 114416399226901796}
   m_Layer: 0
   m_Name: GreenSlime
   m_TagString: Enemy
@@ -43,7 +43,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1902215113146432}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.63, y: -1.74, z: -5.5957217}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -112,18 +112,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114048375504182774
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1902215113146432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fae0c64dc1f23fb43b747c969ba19c1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
 --- !u!114 &114293956255666166
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -137,6 +125,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 0}
+--- !u!114 &114416399226901796
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1902215113146432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f02f7daa8c4d5c46a304f7c0630f0d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!114 &114487689673633932
 MonoBehaviour:
   m_ObjectHideFlags: 1

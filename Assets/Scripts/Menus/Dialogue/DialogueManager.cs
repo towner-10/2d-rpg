@@ -7,14 +7,14 @@ public class DialogueManager : MonoBehaviour {
 
     private Queue<string> sentences;
     public GameObject dialogueUI;
-    private TextMeshProUGUI name;
+    private TextMeshProUGUI nameText;
     private TextMeshProUGUI dialogueText;
 
-    bool enabled = false;
+    bool dialogueEnabled = false;
 
     void Start()
     {
-        name = dialogueUI.transform.Find("Name").GetComponent<TextMeshProUGUI>();
+        nameText = dialogueUI.transform.Find("Name").GetComponent<TextMeshProUGUI>();
         dialogueText = dialogueUI.transform.Find("Text").GetComponent<TextMeshProUGUI>();
         dialogueUI.SetActive(false);
         sentences = new Queue<string>();
@@ -22,7 +22,7 @@ public class DialogueManager : MonoBehaviour {
 
     private void Update()
     {
-        if(enabled == true)
+        if(dialogueEnabled == true)
         {
             if (Input.GetKeyDown(KeyCode.Return))
             {
@@ -33,10 +33,10 @@ public class DialogueManager : MonoBehaviour {
 
     public void StartDialogue(Dialogue dialogue)
     {
-        enabled = true;
+        dialogueEnabled = true;
         Time.timeScale = 0;
         dialogueUI.SetActive(true);
-        name.text = dialogue.name;
+        nameText.text = dialogue.name;
 
         foreach (string sentence in dialogue.sentences)
         {
@@ -71,8 +71,8 @@ public class DialogueManager : MonoBehaviour {
     void EndDialogue()
     {
         Time.timeScale = 1;
-        enabled = false;
-        name.text = null;
+        dialogueEnabled = false;
+        nameText.text = null;
         dialogueText.text = null;
         dialogueUI.SetActive(false);
     }

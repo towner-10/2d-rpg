@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour {
 
-    public GameObject player;
+    [HideInInspector]public GameObject player = null;
 
     Quaternion rotation;
 
-    private void Start()
+    private void Awake()
     {
+        rotation = this.transform.rotation;
+    }
+
+    public void SetPlayer(GameObject p)
+    {
+        player = p;
         GetComponent<Pathfinding.AIDestinationSetter>().target = player.transform;
         GetComponent<EnemyAttack>().player = player;
-        rotation = this.transform.rotation;
     }
 
     void Update()
